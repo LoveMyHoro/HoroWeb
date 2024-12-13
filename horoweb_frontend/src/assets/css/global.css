@@ -1,0 +1,22 @@
+/* 针对Webkit浏览器（如Chrome和Safari） */
+::-webkit-scrollbar {
+    width: 8px; /* 设置滚动条的宽度 */
+  }
+  
+  /* 针对Firefox浏览器 */
+  * {
+    scrollbar-width: thin; /* 设置滚动条宽度为"thin" */
+    scrollbar-color: auto; /* 设置滚动条颜色（如果需要） */
+  }
+  
+  /* 针对IE和Edge浏览器 */
+  html {
+    scrollbar-face-color: #000; /* 设置滚动条颜色 */
+    scrollbar-track-color: #fff; /* 设置滚动条轨道颜色 */
+    scrollbar-arrow-color: #000; /* 设置滚动条箭头颜色 */
+    scrollbar-highlight-color: #fff; /* 设置滚动条高亮颜色 */
+    scrollbar-3dlight-color: #000; /* 设置滚动条3D光亮颜色 */
+    scrollbar-shadow-color: #000; /* 设置滚动条阴影颜色 */
+    scrollbar-darkshadow-color: #000; /* 设置滚动条暗影颜色 */
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* 隐藏滚动条，直到鼠标悬停 */
+  }

@@ -1,0 +1,30 @@
+1.get:通常用于传递单个参数
+    (1)调用方法
+        let param={
+            id:id.value
+            title:title.value
+        }
+        const result = await getArticleDetail(param);
+    (2)实现方法
+        export const getArticleDetail=function(param){
+        return request.get('article/getById',{params:param})
+        }
+
+2.post:通常用于传递json串
+    (1)调用方法
+        const loginFormRef = ref({
+            username: "",
+            password: "",
+            });
+          const res = await loginService(loginForm.value);
+    (2)实现方法
+        export const loginService=function(loginData){
+        return request.post('user/login',loginData)
+        }
+
+    (3)注意点：当Spring Boot后端接收前端发送的包含多个属性的对象形式数据时，有两种接收方式：
+        一是使用@RequestBody注解（适用于前端以JSON格式发送数据，如通过axios等设置contentType为'application/json'发送）
+            ，可将前端发送的JSON数据映射到对应的类实例上，方便通过对象属性获取值进行后续处理；
+        二是可将对象中的各个属性当作表单字段，使用@RequestParam注解分别接收各属性作为单个参数（可通过设置前端contentType
+            为'application/x-www-form-urlencoded'模拟表单数据发送方式），但前端若发送的是JSON格式数据且想用此方式分别接收，
+            后端可能需做额外转换工作，总体而言用对象整体接收对于处理这类数据更为方便直接。

@@ -1,0 +1,15 @@
+这个文件夹放的是路由跳转的js文件
+
+注意点:
+    1.<router-view>渲染的是当前页面及其子路由
+    2.根组件中的 <router-view>：
+        负责渲染应用中所有的顶级路由。
+        只处于组件树的顶层。
+
+      子组件中的 <router-view>：
+        用于嵌套路由，允许在一个路由内进一步定义子路由（index.js中定义的children中的路由）。之后可以在父页面上通过<router-view>渲染子路由
+        位于其他组件内部，使得可以在更复杂的布局中进行路由管理。
+        
+    3.由于<TopNavbar /> 是在MainLayout组件中直接渲染的。由于其位置在 <router-view> 的外部，这意味着每次路由发生
+        变化时，只要是指向MainLayout的子路由。<TopNavbar /> 将会始终保留在页面上，而不会被替换或销毁。
+        因为MainLayout组件的子路由都会渲染到MainLayout组件的<router-view>上。

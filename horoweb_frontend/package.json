@@ -1,0 +1,46 @@
+{
+  "name": "horoweb",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vueup/vue-quill": "^1.2.0",
+    "axios": "^1.7.7",
+    "cropperjs": "^1.6.2",
+    "element-plus": "^2.8.7",
+    "font-awesome": "^4.7.0",
+    "gsap": "^3.12.5",
+    "highlight.js": "^11.10.0",
+    "jquery": "^3.7.1",
+    "katex": "^0.16.11",
+    "live2d-widget": "^3.1.4",
+    "marked": "^15.0.3",
+    "md-editor-v3": "^5.0.2",
+    "mermaid": "^11.4.1",
+    "particles.vue3": "^1.22.0",
+    "pina": "^0.20.2204228",
+    "pinia": "^2.2.6",
+    "pinia-persistedstate-plugin": "^0.1.0",
+    "prettier": "^3.4.2",
+    "raphael": "^2.3.0",
+    "screenfull": "^6.0.2",
+    "vant": "^4.9.8",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5",
+    "vuetify": "^3.7.4",
+    "wangeditor": "^4.7.15"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "sass": "^1.81.0",
+    "sass-embedded": "^1.80.6",
+    "sass-loader": "^16.0.3",
+    "vite": "^5.4.10",
+    "vite-plugin-vue-devtools": "^7.5.4"
+  }
+}

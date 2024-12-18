@@ -21,15 +21,15 @@
       </el-header>  
 
       <!-- Video Section -->  
-      <video  
+      <!-- <video  
         v-if="isHome"  
         src="/src/assets/videos/02.mp4"  
         class="background-video"  
         autoplay  
         loop  
         muted  
-      ></video>  
-
+      ></video>   -->
+      <img v-if="isHome" src="/src/assets/images/bg3.jpg" alt="" class="MainBackground-image">
       <el-container class="content-container">  
         <el-aside width="300px">  
           <div class="user-module">  
@@ -365,5 +365,11 @@ watch(
   position: relative; // 确保内容区域相对于其容器进行定位  
   z-index: 2; // 确保内容位于视频之上  
   padding-top: 20px; // 为内容顶部添加一些空间  
+}
+.MainBackground-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: -60px;
 }
 </style>

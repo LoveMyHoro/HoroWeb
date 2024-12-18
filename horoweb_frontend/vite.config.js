@@ -20,8 +20,8 @@ export default defineConfig({
     open:true,
     proxy:{
       '/api':{//获取路径中包含了api的源
-        target:'http://localhost:8080',
-        //target:'http://www.horoweb.cn',//后台服务所在源
+        //target:'http://localhost:8080',
+        target:'http://www.horoweb.cn',//后台服务所在源
         changeOrigin:true,//修改源
         rewrite:(path)=>path.replace(/^\/api/,'')//将api替换为''
       }
